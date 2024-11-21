@@ -1,6 +1,8 @@
+set nocompatible
 set number
 set numberwidth=1
-set clipboard=unnamed
+" set clipboard=unnamed
+set clipboard+=unnamedplus
 syntax on
 set showcmd
 set ruler
@@ -15,8 +17,8 @@ set autoindent    ""- turns it on
 set smartindent   ""- does the right thing (mostly) in programs
 set cindent       ""- stricter rules for C programs
 
-"" Encoding
-set encoding=utf-8
+" Encoding
+set encoding=UTF-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 
@@ -26,7 +28,7 @@ set backspace=indent,eol,start
 "" Tabs. May be overridden by autocmd rules
 set tabstop=4
 set softtabstop=0
-set shiftwidth=4
+"set shiftwidth=4
 set expandtab
 
 "" Map leader to ,
@@ -39,3 +41,29 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+
+"completeopt COC
+set completeopt=menuone,noselect
+
+"wrap
+set nowrap
+
+
+

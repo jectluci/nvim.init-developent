@@ -1,0 +1,115 @@
+{
+	"jedi.enable": true,
+	"jedi.startupMessage": true,
+	"jedi.markupKindPreferred": "plaintext",
+	"jedi.trace.server": "off",
+	"jedi.jediSettings.autoImportModules": [],
+	"jedi.executable.command": "jedi-language-server",
+	"jedi.executable.args": [],
+	"jedi.codeAction.nameExtractFunction": "jls_extract_def",
+	"jedi.codeAction.nameExtractVariable": "jls_extract_var",
+	"jedi.completion.disableSnippets": false,
+	"jedi.completion.resolveEagerly": false,
+	"jedi.diagnostics.enable": true,
+	"jedi.diagnostics.didOpen": true,
+	"jedi.diagnostics.didChange": true,
+	"jedi.diagnostics.didSave": true,
+	"jedi.hover.enable": true,
+	"jedi.hover.disable.keyword.all": false,
+	"jedi.hover.disable.keyword.names": [],
+	"jedi.hover.disable.keyword.fullNames": [],
+	"jedi.workspace.extraPaths": [],
+	"jedi.workspace.symbols.maxSymbols": 20,
+	"jedi.workspace.symbols.ignoreFolders": [
+		".nox",
+		".tox",
+		".venv",
+		"__pycache__",
+		"venv"
+	],
+	"suggest.noselect": false,
+	"tsserver.enable": true,
+	"prettier.enable": true,
+	"prettier.useTabs": true,
+	"coc.preferences.formatOnType": true,
+	"diagnostic-languageserver.filetypes": {
+		"python": "flake8"
+	},
+	"diagnostic-languageserver.linters": {
+		"flake8": {
+			"sourceName": "flake8",
+			"command": "flake8",
+			"debounce": 200,
+			"rootPatterns": [".git", "pyproject.toml", "setup.py"],
+			"args": [
+				"--ignore=E402,C901,W503,W504,E116,E702,C0103,C0114,C0115,C0116,C0103,C0301,W0613,W0102,R0903,R0902,R0914,R0915,R0205,W0703,W0702,W0603",
+				"--format=%(row)d,%(col)d,%(code).1s,%(code)s: %(text)s",
+				"-"
+			],
+			"offsetLine": 0,
+			"offsetColumn": 0,
+			"formatLines": 1,
+			"formatPattern": [
+				"(\\d+),(\\d+),([A-Z]),(.*)(\\r|\\n)*$",
+				{
+					"line": 1,
+					"column": 2,
+					"security": 3,
+					"message": 4
+				}
+			],
+			"securities": {
+				"W": "info",
+				"E": "warning",
+				"F": "info",
+				"C": "info",
+				"N": "hint"
+			}
+		}
+	},
+	"flutter.enabled": true,
+	"flutter.lsp.debug": true,
+	"flutter.lsp.initialization.closingLabels": true,
+	"flutter.UIPath": true,
+	"suggest.completionItemKindLabels": {
+		"variable": "\uf71b",
+		"constant": "\uf8ff",
+		"struct": "\ufb44",
+		"class": "\uf0e8",
+		"interface": "\ufa52",
+		"text": "\ue612",
+		"enum": "\uf435",
+		"enumMember": "\uf02b",
+		"color": "\ue22b",
+		"property": "\ufab6",
+		"field": "\uf93d",
+		"unit": "\uf475",
+		"file": "\uf471",
+		"value": "\uf8a3",
+		"event": "\ufacd",
+		"folder": "\uf115",
+		"keyword": "\uf893",
+		"snippet": "\uf64d",
+		"operator": "\uf915",
+		"reference": "\uf87a",
+		"typeParameter": "\uf278",
+		"default": "\uf29c"
+	},
+	"typescript.validate.enable": true,
+	"typescript.autoClosingTags": true,
+	"angular.enable-strict-mode-prompt": true,
+
+	"languageserver": {
+		"flow": {
+			"command": "flow",
+			"args": ["lsp"],
+			"filetypes": ["javascript", "javascriptreact"],
+			"initializationOptions": {},
+			"requireRootPattern": true,
+			"settings": {},
+			"rootPatterns": [".flowconfig"]
+		}
+  },
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "snippets.ultisnips.pythonPrompt": false
+}
