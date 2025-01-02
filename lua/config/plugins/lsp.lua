@@ -9,7 +9,7 @@ local lsp = require('lsp-zero')
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-config.tsserver.setup {
+config.ts_ls.setup {
   cmd = { "typescript-language-server", "--stdio" },
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
   -- cmd = { "javascript", "javascriptreact", "typescript", "typescriptreact", "html", "angular" },
@@ -140,7 +140,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
-local project_library_path = "/usr/local/lib/node_modules/@angular/language-server/lib"
+local project_library_path = "/home/ject/node_modules/@angular/language-server/bin/"
 local cmd = { "ngserver", "--stdio", "--tsProbeLocations", project_library_path, "--ngProbeLocations",
   project_library_path }
 
