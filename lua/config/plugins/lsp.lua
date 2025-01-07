@@ -140,7 +140,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
-local project_library_path = "/home/ject/node_modules/@angular/language-server/bin/"
+local project_library_path = "/usr/lib/node_modules/@angular/language-server/bin/"
 local cmd = { "ngserver", "--stdio", "--tsProbeLocations", project_library_path, "--ngProbeLocations",
   project_library_path }
 
